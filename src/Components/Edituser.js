@@ -20,7 +20,7 @@ function Edituser() {
     setMobile(context.users[id].mobile);
     setBatch(context.users[id].batch);
     setTimings(context.users[id].timings);
-  }, [context.users, id])
+  }, [context, id])
 
   let handleSubmit = () => {
     let newData = { name, dob, mobile, batch, timings };

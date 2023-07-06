@@ -9,8 +9,10 @@ function UseReducer() {
             case "increment": return { ...state, count: state.count + 1 }
             case "reset": return { ...state, count: 0, name: "" }
             case "namechange": return { ...state, name: action.value }
+            default : return "no-action";
         }
     }
+
     const [state, dispatch] = useReducer(reducer, initialValue);
     return <div className="container-fluid">
         <h2>UseReducer</h2><br />
